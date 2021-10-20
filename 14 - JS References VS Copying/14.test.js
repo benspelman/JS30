@@ -1,0 +1,25 @@
+/**
+ * @jest-environment jsdom
+ */
+
+const arrayOfPlayers = require('./14');
+
+describe('players array', () => {
+    it('Is not null', () => {
+        expect(arrayOfPlayers[0]).not.toBeNull();
+    });
+
+    it('Has the original elements and is not changed', () => {
+        expect(arrayOfPlayers[0][3]).toBe('Poppy');
+    });
+});
+
+describe('players2 array', () => {
+    it('Is not null', () => {
+        expect(arrayOfPlayers[1]).not.toBeNull();
+    });
+
+    it('Has the changed values', () => {
+        expect(arrayOfPlayers[1][3]).toBe('Donald');
+    });
+});
