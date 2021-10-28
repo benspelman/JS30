@@ -6,32 +6,20 @@ function strip(bandName) {
     return  bandName.replace(/^(a |the |an )/i, '').trim();
 }
 
-// const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log("DOM is ready");
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM is ready");
 
-//     const DOMBandList = document.querySelector('#bands');
+    const DOMBandList = document.querySelector('#bands');
 
-//     DOMBandList.innerHTML = sortedBands.map(band => `<li>${band}</li>`).join('');
+    DOMBandList.innerHTML = sortedBands.map(band => `<li>${band}</li>`).join('');
 
-// }, false);
+}, false);
 
-// let thingsToExport = {
-//     bands,
-//     strip
-// }
+let thingsToExport = {
+    bands,
+    strip
+}
 
-// module.exports = thingsToExport;
-
-var adult = true;
-if (adult) {
-    var name = "Kyle";
-    let age = 39;
-    console.log("Shhh, this is a secret!");
-    }
-    
-console.log(name);
-// Kyle
-console.log(age);
-// Error!
+module.exports = thingsToExport;
